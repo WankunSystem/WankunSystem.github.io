@@ -414,102 +414,6 @@ img {
   color: var(--muted);
 }
 
-.story-layout {
-  display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: 1rem;
-  align-items: start;
-}
-
-.story-main {
-  padding: clamp(1.15rem, 2.3vw, 1.7rem);
-}
-
-.story-copy h2 {
-  margin: 0.35rem 0 0.6rem;
-  font-size: clamp(1.35rem, 2.1vw, 2rem);
-  line-height: 1.25;
-}
-
-.story-copy p {
-  margin: 0 0 1rem;
-  color: var(--muted);
-}
-
-.story-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.42rem;
-  padding-bottom: 0.12rem;
-  color: var(--brand);
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 0.98rem;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid currentColor;
-  transition: color 0.2s ease;
-}
-
-.story-link:hover {
-  color: #000;
-}
-
-.instagram-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-
-.instagram-mark svg {
-  width: 100%;
-  height: 100%;
-}
-
-.instagram-handle {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-}
-
-.instagram-arrow {
-  font-size: 0.95rem;
-  line-height: 1;
-}
-
-.story-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
-}
-
-.story-photo {
-  overflow: hidden;
-  border-radius: 16px;
-  border: 1px solid #ececec;
-  background: #f6f6f6;
-}
-
-.story-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-.story-photo figcaption {
-  padding: 0.65rem 0.75rem;
-  font-family: "Barlow Condensed", sans-serif;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.story-side {
-  display: grid;
-  gap: 1rem;
-}
-
 .content-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -650,17 +554,8 @@ blockquote + blockquote {
 
 @media (max-width: 920px) {
   .hero-grid,
-  .content-grid,
-  .story-layout {
+  .content-grid {
     grid-template-columns: 1fr;
-  }
-
-  .story-main {
-    padding: 1.1rem;
-  }
-
-  .story-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .steps-grid,
@@ -730,18 +625,6 @@ blockquote + blockquote {
 @media (max-width: 640px) {
   .service-grid {
     grid-template-columns: 1fr;
-  }
-
-  .story-main {
-    padding: 1rem;
-  }
-
-  .story-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .story-photo img {
-    aspect-ratio: 4 / 3;
   }
 
   .steps-grid,
