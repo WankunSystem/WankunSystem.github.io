@@ -137,7 +137,7 @@ img {
   min-height: calc(90svh - var(--header-height));
   display: flex;
   align-items: center;
-  background-image: url("./assets/images/wankun-system.jpg");
+  background-image: url("../images/wankun-system.jpg");
   background-size: cover;
   background-position: center;
   isolation: isolate;
