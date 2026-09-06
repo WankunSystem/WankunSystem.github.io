@@ -56,6 +56,60 @@ img {
   display: block;
 }
 
+.story-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.story-main {
+  padding: clamp(1.15rem, 2.3vw, 1.7rem);
+}
+
+.story-copy h2 {
+  margin: 0.35rem 0 0.6rem;
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
+  line-height: 1.25;
+}
+
+.story-copy p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.story-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.story-photo {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #ececec;
+  background: #f6f6f6;
+}
+
+.story-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.story-photo figcaption {
+  padding: 0.65rem 0.75rem;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.story-side {
+  display: grid;
+  gap: 1rem;
+}
+
 .container {
   width: min(1120px, 92vw);
   margin: 0 auto;
@@ -326,6 +380,18 @@ img {
   gap: 1rem;
 }
 
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .service-card {
   padding: 1rem;
   border: 1px solid #e6e6e6;
@@ -355,6 +421,18 @@ img {
 
 .service-card p {
   margin: 0 0 0.65rem;
+  color: var(--muted);
+}
+
+.member-card ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.member-card li {
+  margin: 0;
   color: var(--muted);
 }
 
@@ -554,8 +632,18 @@ blockquote + blockquote {
 
 @media (max-width: 920px) {
   .hero-grid,
-  .content-grid {
+  .content-grid,
+  .story-layout {
     grid-template-columns: 1fr;
+  }
+
+  .member-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .steps-grid,
@@ -625,6 +713,18 @@ blockquote + blockquote {
 @media (max-width: 640px) {
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .story-main {
+    padding: 1rem;
+  }
+
+  .story-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .story-photo img {
+    aspect-ratio: 4 / 3;
   }
 
   .steps-grid,

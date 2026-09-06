@@ -17,7 +17,6 @@
 - `service-agency.html`
 - `service-healthcase.html`
 - `service-airwater.html`
-- `service-other.html`
 - `assets/css/styles.css`
 - `assets/images/*`
 
